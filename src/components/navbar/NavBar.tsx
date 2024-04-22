@@ -1,27 +1,27 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.jpg'
 
 function Navbar() {
- 
-  
 
   return (
     <>
-     <div className='w-full bg-indigo-900 text-white flex justify-center py-4'>
-          <div className="container flex justify-between text-lg">
-          <div>
+     <div className='bg-green-200 font-bold text-black flex justify-center py-4'>
+     <div className="container flex justify-between text-lg">
+            <div>
             <img src={logo} alt="" className='App-logo' />
             </div>
+            
 
             <div className='flex gap-4'>
-              <div className='hover:underline'>Home</div>
-              <div className='hover:underline'>Sobre Nós</div>
-              <div className='hover:underline'>Produtos</div>
-              <div className='hover:underline'>Login</div>
-              <div className='hover:underline'>Contatos</div>
+              <Link to='/home' className='hover:underline'>Home</Link>
+              <Link to='/sobrenos' className='hover:underline'>Sobre Nós</Link>
+              <Link to='/produtos' className='hover:underline'>Produtos</Link>
+              <Link to='/produtos' className='hover:underline'>Categorias</Link>
+              <Link to='/contato' className='hover:underline'>Contato</Link>
+              <Link to='/login' className='hover:underline'>Login</Link>
             </div>
           </div>
-        </div>
+          </div>
     </>
   )
 }
